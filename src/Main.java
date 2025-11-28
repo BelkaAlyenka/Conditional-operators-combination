@@ -4,7 +4,7 @@ public class Main {
         int clientOS = 0;
         if (clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS == 1) {
+        } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         //Задача 2
@@ -15,12 +15,12 @@ public class Main {
             System.out.println("Установите версию приложения для iOS по ссылке");
         } else if (clientOS == 1 && clientDeviceYear < 2015) {
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
-        } else if (clientOS == 1 && clientDeviceYear >= 2015) {
+        } else {
             System.out.println("Установите версию приложения для Android по ссылке");
         }
         //Задача 3
         int year = 2028;
-        if (year % 4 == 0 && year % 100 != 0 && year >= 1584 || year % 400 == 0 && year >= 1584) {
+        if ((year >= 1584) && (year % 4 == 0 && year % 100 != 0 || year % 400 == 0)) {
             System.out.println(year+" год является високосным");
         } else {
             System.out.println(year+" год не является високосным");
